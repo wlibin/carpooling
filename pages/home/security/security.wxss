@@ -1,0 +1,28 @@
+.content{
+  font-size: 14px;
+  padding: 0 16px 0 16px;
+  line-height: 28px;
+  margin-top: 10px;
+}
+.content text{
+  margin-left: 2em;
+}
+.cont_title{
+  font-size: 16px;
+  font-weight: 600;
+  margin: 10px 0 10px 0;
+}
+.cont_title1{
+  font-size: 14px;
+  font-weight: 500;
+}
+.cont-ln{
+  margin-bottom: 15px;
+}
+.cont-ut{
+  width: 100%;
+  font-size: 16px;
+  font-weight: 700;
+  text-align: center;
+  line-height: 50px;
+}

@@ -1,0 +1,42 @@
+page{
+  height: 100%;
+  background-color: #EFEFF4;
+}
+.notice_xu{
+  font-size: 14px;
+  background-color: #e5f6fe;
+  padding: 10px;
+  margin: 10px;
+  color: #666;
+}
+.notice_xu text{
+  font-weight: 600;
+}
+.notice_tab{
+  font-size: 16px;
+  height: 40px;
+  line-height: 40px;
+  background-color: #FFF;
+  margin: 20px 10px;
+  padding: 5px;
+  border-radius: 6px;
+}
+.notice_tab view{
+  float: left;
+  padding: 0px 10px;
+  width: 80px;
+  border-right: 1px solid #DDD;
+  color: #333;
+}
+.notice_tab input{
+  position: relative;
+  top: 10px;
+  padding: 0 5px;
+}
+.fromSubmit{
+  width: 96%;
+  background-color: #00bfaf;
+  color: #FFF;
+  margin-bottom:30px;
+  margin-top: 10px;
+}

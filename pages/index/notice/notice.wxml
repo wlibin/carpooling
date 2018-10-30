@@ -1,0 +1,5 @@
+<view class='notice'>
+  <view class='notice_title'>{{noticeTitle}}</view>
+  <view class='notice_time'>发布时间：{{createTime}}</view>
+  <view class='notice_content'><text>{{noticeContent}}</text></view>
+</view>

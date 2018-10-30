@@ -1,0 +1,68 @@
+<view class='edit_content'>
+  <map id="myMap" hidden='{{showModal}}' style="width: 100%; height: 200px;" longitude="{{longitude}}" latitude="{{latitude}}" scale='{{scale}}' polyline="{{polyline}}" markers="{{markers}}" covers="{{covers}}" show-location></map>
+  <view class='edit_title'>联系人信息</view>
+  <view class='edit_input'>
+    <view class='edit_inpit_span'><text class='edit_inpit_title'><text style="color:#4db5ff" class='fa fa-user-o'></text> 姓名</text>
+      <input disabled='true' value='{{contactName}}'/>
+    </view>
+    <view class='edit_inpit_span'><text class='edit_inpit_title'><text style="color:#4db5ff" class='fa fa-circle-o'></text> 姓别</text>
+      <input disabled='true' wx:if='{{contactGender == 1}}' value='男'/>
+      <input disabled='true' wx:elif='{{contactGender == 2}}' value='女'/>
+      <input disabled='true' wx:else value='未知'/>
+    </view>
+    <view class='edit_inpit_span'><text class='edit_inpit_title'><text style="color:#4db5ff" class='fa fa-phone'></text> 电话</text>
+      <input disabled='true' value='{{contactTel}}'/>
+    </view>
+  </view>
+  <view class='edit_title'>拼车信息</view>
+    <view class='edit_input'>
+      <view class='edit_inpit_span'><text class='edit_inpit_title'><text style="color:#4db5ff" class='fa fa-check-square-o'></text> 类型</text>
+        <input disabled='true' wx:if="{{type==1}}" value='人找车' class='edit_input_adr'/>
+        <input disabled='true' wx:if="{{type==2}}" value='车找人' class='edit_input_adr'/>
+      </view>
+      <view class='edit_inpit_span'><text class='edit_inpit_title '><text style="color:#00bfaf" class='fa fa-circle-o'></text> 起点</text>
+        <input disabled='true' value='{{startAddress}}' class='edit_input_adr'/>
+      </view>
+      <view wx:if="{{resultDistance}}" class='edit_inpit_span'><text style="color:" class='edit_inpit_title '><text class='fa fa-circle-o'></text> 距离</text>
+        <input disabled='true' value='{{resultDistance}}' class='edit_input_adr'/>
+      </view>
+      <view class='edit_inpit_span'><text class='edit_inpit_title'><text style="color:#FF0000" class='fa fa-circle-o'></text> 终点</text>
+        <input disabled='true' value='{{endAddress}}' class='edit_input_adr'/>
+      </view>
+      <view class='edit_inpit_span'><text class='edit_inpit_title'><text style="color:#4db5ff" class='fa fa-calendar'></text> 时间</text>
+        <input value='{{startDate}} {{startTime}}' disabled='disabled'/>
+      </view>
+      <view class='edit_inpit_span'><text class='edit_inpit_title'><text wx:if="{{type==='1'}}"><text style="color:#4db5ff" class='fa fa-users'></text> 人数</text><text  wx:if="{{type==='2'}}"><text style="color:#4db5ff" class='fa fa-bus'></text> 空位</text></text><input name="indexNumber" value="{{indexNumber}}" disabled='disabled'/>
+    </view>
+  </view>
+  <view wx:if="{{marks}}" class='edit_title'>备注留言</view>
+  <view wx:if="{{marks}}" class='edit_inpit_text'>
+    <text>{{marks}}</text>
+  </view>
+</view>
+<view class='btn_tbr'>
+  <view class='btn_tbr_circle' catchtap="circleCalling">
+      <text class='fa fa-info-circle' style='font-size:20px;'></text> 举报
+  </view>
+  <view class='btn_tbr_share' catchtap="shareCalling">
+      <text class='fa fa-share-alt' style='font-size:20px;'></text> 分享
+  </view>
+  <view class='btn_tbr_phone' data-tel='{{contactTel}}' catchtap="phoneCalling">
+      <text class='fa fa-phone' style='font-size:20px;'></text> 一键拨号
+  </view>
+</view>
+<button class='btn_tbr_share_a' data-sid="{{sid}}" style='z-index:10001' open-type="share">分享</button>
+<!--弹窗-->
+<view class="modal-mask" bindtap="hideModal" catchtouchmove="preventTouchMove" wx:if="{{showModal}}"></view>
+<view class="modal-dialog" wx:if="{{showModal}}">
+  <view class="modal-title">举报原因</view>
+  <view class="modal-content">
+    <view class="modal-input">
+      <textarea bindinput='reportValue' style='padding:10px;min-height:150px;' auto-height='true' placeholder='请详细说明你要举报的原因,如发现恶意举报将会受到处罚！'></textarea>
+    </view>
+  </view>
+  <view class="modal-footer">
+    <view class="btn-cancel" bindtap="onCancel" data-status="cancel">取消</view>
+    <view class="btn-confirm" bindtap="onConfirm" data-uid="{{uid}}" data-status="confirm">提交</view>
+  </view>
+</view>

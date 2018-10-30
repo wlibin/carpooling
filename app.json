@@ -1,0 +1,57 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/index/notice/notice",
+    "pages/special/special",
+    "pages/special/driver/driver",
+    "pages/release/release",
+    "pages/release/add/add",
+    "pages/release/edit/edit",
+    "pages/release/detail/detail",
+    "pages/release/myself/myself",
+    "pages/release/city/city",
+    "pages/home/home",
+    "pages/home/agreement/agreement",
+    "pages/home/authentication/authentication",
+    "pages/home/security/security",
+    "pages/logs/logs"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#494c55",
+    "navigationBarTitleText": "庄浪出行",
+    "navigationBarTextStyle":"white",
+    "backgroundColor": "#494c55"
+
+  },
+  "tabBar": {
+    "color": "#666666",
+    "selectedColor": "#00bfaf",
+    "borderStyle": "black",
+    "list": [
+      {
+        "selectedIconPath": "pages/resource/images/icoIndexPress.png",
+        "iconPath": "pages/resource/images/icoIndex.png",
+        "pagePath": "pages/index/index",
+        "text": "首页"
+      },
+      {
+        "selectedIconPath": "pages/resource/images/icoSpecialPress.png",
+        "iconPath": "pages/resource/images/icoSpecial.png",
+        "pagePath": "pages/special/special",
+        "text": "专线"
+      },{
+        "selectedIconPath": "pages/resource/images/icoReleasePress.png",
+        "iconPath": "pages/resource/images/icoRelease.png",
+        "pagePath": "pages/release/release",
+        "text": "发布"
+      },
+      {
+        "selectedIconPath": "pages/resource/images/icoHomePress.png",
+        "iconPath": "pages/resource/images/icoHome.png",
+        "pagePath": "pages/home/home",
+        "text": "我的"
+      }
+    ]
+  }
+}

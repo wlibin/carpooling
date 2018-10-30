@@ -1,0 +1,61 @@
+page{
+  background-color: #efeff4;
+  height: 100%;
+}
+.driver{
+  font-size: 14px;
+}
+.driver_tab{
+  background-color: #FFF;
+  margin: 10px 10px 0 10px;
+  padding: 10px;
+  border-radius: 10px;
+}
+.driver_tab_img{
+  float: left;
+}
+.driver_tab_tel{
+  float: right;
+  font-size: 12px;
+  color: #666;
+  margin-right: 8px;
+  margin-top: 8px;
+}
+.driver_tab_img image{
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+}
+.driver_tab_cont{
+  height: 80px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #DDD;
+  font-size: 14px;
+  color: #444;
+  padding-left: 100px;
+  line-height: 22px;
+}
+.driver_tab_cont_name{
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 32px;
+  color: #000;
+}
+.driver_tab_cont_type text{
+  color: #777;
+  font-size: 10px;
+}
+.driver_tab_cont_number text{
+  color: #777;
+  font-size: 10px;
+}
+.driver_tab_cont_name text{
+  font-size: 12px;
+  color: #666;
+  font-weight: 0;
+}
+.driver_tab_marks{
+  padding: 10px;
+  font-size: 14px;
+  color: #444;
+}

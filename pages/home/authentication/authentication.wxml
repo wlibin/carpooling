@@ -1,0 +1,18 @@
+<view class='notice'>
+  <view class='notice_xu'><text>实名认证须知：</text>请填写真实有效的个人身份信息，认证通过后将无法修改，如发现上传冒用他人身份证，将永久封禁账号权限！</view>
+  <view>
+    <view class='notice_tab'>
+      <view>姓名</view><input placeholder='请填写你的真实姓名' type='text' name="userName"/>
+    </view>
+    <view class='notice_tab'>
+      <view>身份证号码</view><input placeholder='请填写二代居民身份证号码' type='idcard' name="idcard"/>
+    </view>
+    <view class='notice_tab'>
+      <view>手机号码</view><input type='number' placeholder='请填写你的手机号码' name="phone"/>
+    </view>
+    <view class='notice_tab'>
+      <view>验证码</view><input type='number' placeholder='请填写收到的验证码' name="code"/>
+    </view>
+    <button class='fromSubmit' form-type='submit'>提交</button>
+  </view>
+</view>

@@ -1,0 +1,82 @@
+<view class='edit_content'>
+  <view class="ad_popError" style='position:fixed; top:0;width: 750rpx;' wx:if="{{popErrorMsg}}">{{popErrorMsg}}</view>
+  <form bindsubmit="formSubmit" bindreset="formReset">
+    <view class='edit_types'>
+      <text class='edit_types_left'>类型</text>
+      <text class='edit_types_right' wx:if="{{type==='1'}}">人找车</text>
+      <text class='edit_types_right' wx:if="{{type==='2'}}">车找人</text>
+      <input hidden="true" value="{{type}}" name="type"/>
+      <input hidden='true' value="{{uId}}" name="uId"/>
+    </view>
+    <view class='edit_title'>填写出行信息</view>
+    <view class='edit_input'>
+      <view class='edit_inpit_span'><text class='edit_inpit_title '>起点<text class='edit_inpit_requ'>*</text></text>
+        <!--<picker bindchange="startAddressTab" mode = "region" value="{{region}}">
+          <input disabled='true' placeholder='从哪儿出发' value='{{startAddress[0]}}{{startAddress[1]}}{{startAddress[2]}}' class='edit_input_adr'/>
+          <input name="startProvince" hidden='true' value='{{startAddress[0]}}'/>
+          <input name="startCity" hidden='true' value='{{startAddress[1]}}'/>
+          <input name="startDistrict" hidden='true' value='{{startAddress[2]}}'/>
+        </picker>-->
+        <input name="startAddress" placeholder='从哪儿出发' value='{{startAddress}}' class='edit_input_adr'/>
+        <view class='edit_inpit_span_img'><image src='../../resource/images/location.png' data-type="1" bindtap='addressTab' /></view>
+      </view>
+      <view class='edit_inpit_span'><text class='edit_inpit_title'>终点<text class='edit_inpit_requ'>*</text></text>
+        <!--<picker bindchange="endAddressTab" mode = "region" value="{{region}}">
+          <input disabled='true' placeholder='到哪儿去' value='{{endAddress[0]}}{{endAddress[1]}}{{endAddress[2]}}' class='edit_input_adr'/>
+          <input name="endProvince" hidden='true' value='{{endAddress[0]}}'/>
+          <input name="endCity" hidden='true' value='{{endAddress[1]}}'/>
+          <input name="endDistrict" hidden='true' value='{{endAddress[2]}}'/>
+        </picker>-->
+        <input data-type="2" name="endAddress" placeholder='到哪儿去' value='{{endAddress}}' class='edit_input_adr'/>
+        <view class='edit_inpit_span_img'><image src='../../resource/images/location.png' data-type="2" bindtap='addressTab' /></view>
+      </view>
+      <view class='edit_inpit_span'><text class='edit_inpit_title'>日期<text class='edit_inpit_requ'>*</text></text>
+        <view class="section">
+          <picker mode="date" value="{{startDate}}" start="1978-01-01" end="2999-01-01" bindchange="bindDateChange">
+            <input name="startDate" value='{{startDate}}' placeholder="选择出发日期" disabled='disabled'/>
+          </picker>
+        </view>
+      </view>
+      <view class='edit_inpit_span'><text class='edit_inpit_title'>时间<text class='edit_inpit_requ'>*</text></text>
+        <view class="section">  
+          <picker mode="time" value="{{startTime}}" start="00:00" end="23:59" bindchange="bindTimeChange">  
+              <input name="startTime" value='{{startTime}}' placeholder="选择出发时间" disabled='disabled'/>
+          </picker>  
+        </view>
+      </view>
+      <view class='edit_inpit_span'><text class='edit_inpit_title'><text  wx:if="{{type==='1'}}">人数</text><text  wx:if="{{type==='2'}}">空位</text><text class='edit_inpit_requ'>*</text></text>
+        <view class="section" >  
+          <picker bindchange="bindPickerChange" value="{{objectArray.indexNumber}}" range="{{objectArray}}" mode = "selector">  
+              <input name="indexNumber" value='{{objectArray[indexNumber]}}' placeholder="空位/人数" disabled='disabled'/>
+          </picker>
+        </view>
+      </view>
+    </view>
+    <view class='edit_inpit_text'>
+      <textarea name="marks" maxlength="100" class='edit_inpit_textarea' value="{{marks}}" auto-height placeholder="请在此处填写特殊要求以及注意事项..." />
+    </view>
+    <view class='edit_title'>确认联系人信息</view>
+    <view class='edit_input'>
+      <view class='edit_inpit_span'><text class='edit_inpit_title'>姓名<text class='edit_inpit_requ'>*</text></text>
+        <input name="contactName" value='{{contactName}}' placeholder="联系人姓名"/>
+      </view>
+      <view class='edit_inpit_span'><text class='edit_inpit_title'>姓别<text class='edit_inpit_requ'>*</text></text>
+        <radio-group bindchange="genderChange" >
+          <label wx:if="{{contactGender == 1 || contactGender == 0 || contactGender == null || contactGender == ''}}"><radio value="1" checked="true"/>男</label>
+          <label wx:else><radio value="1"/>男</label>
+          <label wx:if="{{contactGender == 2}}"><radio value="2" checked="true"/>女</label>
+          <label wx:else><radio value="2" />女</label>
+        </radio-group>
+        <input hidden='true' value='{{contactGender}}' name="contactGender"/>
+      </view>
+      <view class='edit_inpit_span'><text class='edit_inpit_title'>电话<text class='edit_inpit_requ'>*</text></text>
+        <input name="contactTel" value='{{contactTel}}' type="number" placeholder="联系人电话"/>
+      </view>
+    </view>
+    <checkbox-group  bindchange="agreementCheck">
+      <view class='edit_title_agreement'>
+        <checkbox value="1"/>我已仔细阅读并同意<text bindtap='agreementClick' class='edit_agreement'>《出行协议》</text></view>
+      </checkbox-group>
+    <button class='fromSubmit' form-type='submit'>立即发布</button>
+  </form>
+</view>

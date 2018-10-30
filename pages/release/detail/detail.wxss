@@ -1,0 +1,196 @@
+.edit_content{
+  background-color: #FFF;
+  font-size: 16px;
+  color: #666;
+  overflow-x: hidden;
+  height: 100%;
+  padding-bottom: 60px;
+}
+.edit_types{
+  width: 100%;
+  height: 50px;
+  line-height: 50px;
+}
+.edit_types_left{
+  float: left;
+  margin-left: 20px;
+}
+.edit_title{
+  padding: 10px 10px 5px 20px;
+  border-bottom: 1px solid #e6e6e6;
+  font-size: 16px;
+  color: #555;
+  font-weight: 600;
+}
+.edit_input{
+  width: 96%;
+  margin-left: 2%;
+  margin-right: 2%;
+  height: 100%;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+.edit_input image{
+  width: 32px;
+  height: 32px;
+  float: right;
+  position: relative;
+  top: -15px;
+}
+.edit_inpit_span{
+  width: 100%;
+  height: 38px;
+  line-height: 20px;
+  margin: 5px 15px 5px 15px;
+  border-bottom: 1px solid #e6e6e6;
+}
+
+.edit_inpit_span_img{
+  position: relative;
+  right: 10px;
+}
+.edit_inpit_text{
+  font-size: 14px;
+  line-height: 30px;
+  text-indent: 2em;
+  padding: 10px 20px;
+}
+.edit_inpit_title{
+  padding-right: 15px;
+  margin-top: 10px;
+  border-right: 1px solid #e6e6e6;
+  float: left;
+}
+.edit_inpit_span input{
+  position: relative;
+  top: 6px;
+  left: 10px;
+}
+.edit_inpit_span label{
+  margin-right: 15px;
+}
+.btn_tbr{
+  width: 100%;
+  position: fixed;
+  bottom: 0rpx;
+  border-top: 1px solid #DDD;
+  font-size: 18px;
+  height: 48px;
+  line-height: 48px;
+  text-align: center;
+  z-index: 10000;
+}
+.btn_tbr_circle{
+  float: left;
+  width: 25%;
+  background: #FFF;
+  opacity: 1;
+  color: #666;
+}
+.btn_tbr_share{
+  float: left;
+  width: 35%;
+  background: #69D32C;
+  opacity: 1;
+  color: #fff;
+}
+.btn_tbr_share_a{
+  position: fixed;
+  bottom: 0px;
+  width: 35%;
+  left: 25%;
+  height: 48px;
+  opacity: 0;
+}
+.btn_tbr_phone{
+  float: left;
+  width:40%;
+  background: #F54242;
+  opacity: 1;
+  color: #fff;
+}
+.btn_tbr_circle::after,.btn_tbr_share::after,.btn_tbr_phone::after{
+  border:0;
+}
+
+.modal-mask {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #000;
+  opacity: 0.5;
+  overflow: hidden;
+  z-index: 999999;
+  color: #fff;
+}
+
+.modal-dialog {
+  width: 540rpx;
+  overflow: hidden;
+  position: fixed;
+  top: 35%;
+  left: 0;
+  z-index: 9999999;
+  background: #f9f9f9;
+  margin: -180rpx 105rpx;
+  border-radius: 10rpx;
+}
+
+.modal-title {
+  padding-top: 30rpx;
+  font-size: 36rpx;
+  color: #030303;
+  text-align: center;
+}
+
+.modal-content {
+  padding: 30rpx 32rpx;
+}
+
+.modal-input {
+  display: flex;
+  background: #fff;
+  border: 2rpx solid #ddd;
+  border-radius: 4rpx;
+  font-size: 28rpx;
+}
+
+
+.input {
+  width: 100%;
+  height: 82rpx;
+  font-size: 28rpx;
+  line-height: 28rpx;
+  padding: 0 20rpx;
+  box-sizing: border-box;
+  color: #333;
+}
+
+input-holder {
+  color: #666;
+  font-size: 28rpx;
+}
+
+.modal-footer {
+  display: flex;
+  flex-direction: row;
+  height: 86rpx;
+  border-top: 1px solid #dedede;
+  font-size: 34rpx;
+  line-height: 86rpx;
+}
+
+.btn-cancel {
+  width: 50%;
+  color: #666;
+  text-align: center;
+  border-right: 1px solid #dedede;
+}
+
+.btn-confirm {
+  width: 50%;
+  color: #22cc22;
+  text-align: center;
+}

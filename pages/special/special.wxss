@@ -1,0 +1,59 @@
+page{
+  background-color: #efeff4;
+  height: 100%;
+}
+.special{
+  font-size: 16px;
+}
+.special_tab{
+  background-color: #FFF;
+  border-radius: 10px;
+  margin: 10px 10px 0 10px;
+  padding: 10px;
+  text-align: center;
+}
+.special_tab image{
+  width: 32px;
+  height: 28px;
+}
+.special_tab_qi{
+  font-size: 18px;
+  font-weight: 500;
+  float: left;
+}
+.special_tab_zhong{
+  font-size: 18px;
+  font-weight: 500;
+  float: right;
+}
+.special_tab_float{
+  clear:both;
+}
+.special_tab_top{
+  height: 35px;
+  border-bottom: 2px solid #EEE;
+}
+.special_tab_topl{
+  font-size: 14px;
+  float: left;
+  background: #00bfaf;
+  color: #FFF;
+  padding: 1px 3px;
+  border-radius: 4px;
+  margin-top: 2px;
+}
+.special_tab_topr{
+  font-size: 12px;
+  float: right;
+  color: #666;
+  margin-top: 5px;
+}
+.special_tab_adr{
+  margin-top: 15px;
+  margin-bottom: 5px;
+}
+.special_tab_marks{
+  text-align: left;
+  color: #555;
+  font-size: 14px;
+}

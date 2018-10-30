@@ -1,0 +1,17 @@
+<view class='special'>
+  <view class='special_tab' bindtap='specialClick'>
+    <view class='special_tab_top'>
+      <view class='special_tab_topl'>司机认证专线</view>
+      <view class='special_tab_topr'>查看详情</view>
+    </view>
+    <view class='special_tab_float'></view>
+    <view class='special_tab_adr'>
+      <view class='special_tab_qi'>庄浪县</view>
+      <image src='../resource/images/switch.png'/>
+      <view class='special_tab_zhong'>秦安高铁站</view>
+    </view>
+    <view class='special_tab_marks'>
+      <text>此路线为往返路线，全程全天随时在跑，可随时联系随时出发，不再等待。</text>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,48 @@
+<view class='content'>
+  <view class='cont_title'>出行应该注意些什么？</view>
+  <view class='cont_title1'>1.守时</view>
+  <text>避免乘客因长时间等待而受到损失，请在规定时间内到达约定上车位置。</text>
+  <view class="cont-ln"></view>
+  <view class='cont_title1'>2.主动沟通</view>
+  <text>主动联系，如因信号障碍等原因导致无法接通，请至少联系3次再取消联系。</text>
+  <view class="cont-ln"></view>
+  <view class='cont_title1'>3.适当等待</view>
+  <text>每到达约定地点后，需等待乘客至少10分钟。</text>
+  <view class="cont-ln"></view>
+  <view class='cont_title1'>4.相互尊重</view>
+  <text>尊重乘客，尊重车主，有问题或者特殊要求，经双方意见达成一致后再执行。</text>
+  <view class="cont-ln"></view>
+  <view class='cont_title1'>5.高效安全</view>
+  <text>将出行乘客安全快捷的送到目的地，请不要在中途将乘客转移到其他车辆。</text>
+  <view class="cont-ln"></view>
+  <view class='cont_title1'>6.车费透明</view>
+  <text>乘客在上车前应该提前谈好车费，在到达地点下车之后再进行付费，防止因车主、乱要价、跑路等情况，如发现此类情况应及时投诉并拨打报警电话。</text>
+
+  <view class='cont_title'>存在哪些安全隐患？</view>
+  <view class='cont_title1'>1.携带宠物</view>
+  <text>未经司机同意携带宠物上车。比如：狗、猫、昆虫等动物。</text>
+  <view class="cont-ln"></view>
+  <view class='cont_title1'>2.超载</view>
+  <text>乘客5人以上（含5人）乘车。</text>
+  <view class="cont-ln"></view>
+  <view class='cont_title1'>3.携带大型器械或危险品</view>
+  <text>未经司机同意携带大型器械、家具乘车，比如：体积超过100*80*50cm或重量超过30公斤的物品、烟花炮竹等危险品。</text>
+  <view class="cont-ln"></view>
+  <view class='cont_title1'>4.态度恶劣</view>
+  <text>沟通时乘客出现严重语言攻击或出现人身攻击倾向的，请立即投诉并报警处理。</text>
+
+  <view class='cont_title'>平台惩罚措施是什么？</view>
+  <view class='cont_title1'>1.轻度处罚</view>
+  <text>经顾客投诉发现不限于类似语言攻击等行为，经平台核实，封禁平台账号1-90天不等！</text>
+  <view class="cont-ln"></view>
+  <view class='cont_title1'>1.中度处罚</view>
+  <text>经顾客投诉发现不限于类似乱咬车费，车辆行驶途中转移乘客赚取差价等行为，经平台核实，封禁平台账号90-360天不等！</text>
+  <view class="cont-ln"></view>
+  <view class='cont_title1'>1.重度处罚</view>
+  <text>经顾客投诉发现不限于类似殴打、猥亵、强制要求乘客中途下车、威胁到乘客生命安全等行为，经平台核实，一律永久封禁账号，并报警备案处理！</text>
+  <view class="cont-ln"></view>
+  <text style="color:red">备注：同一手机号、同一身份证号码和同一微信均视为同一平台用户！</text>
+  <view class="cont-ln"></view>
+  <view class='cont-ut'>庄浪出行</view>
+  <view class='cont-ut'>2018/10/20</view>
+</view>

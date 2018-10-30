@@ -1,0 +1,12 @@
+<!-- 没有获取授权弹出弹窗 -->
+<view class="userinfo" hidden='{{!isShow}}'>
+  <view class='dialog-mask'></view>
+  <view class="socket">
+    <view class='title' >微信授权</view>
+    <view class='content' >庄浪拼车出行申请获得以下权限：</view>
+    <view class='contents' ><text style='color:#999;font-size:10px;'> ●</text> 获得你的公开信息（昵称、头像等）</view>
+    <view class='footer'>
+      <button class='authorize' open-type="getUserInfo" bindgetuserinfo="getUserInfo">允许</button>
+    </view>     
+  </view>
+</view>

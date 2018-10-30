@@ -1,0 +1,17 @@
+<view class='driver'>
+  <view class='driver_tab'>
+    <view class='driver_tab_img'>
+      <image src='../../resource/images/ceshi1.png'/>
+    </view>
+    <view class='driver_tab_tel' bindtap='phoneCalling' data-tel='18888888888'><text class='fa fa-phone'></text> 电话</view>
+    <view class='driver_tab_cont'>
+      <view class='driver_tab_cont_name'>王鹏杰<text>（先生）</text></view>
+      <view class='driver_tab_cont_type'><text>●</text> 出租车</view>
+      <view class='driver_tab_cont_number'><text>●</text> 甘L·019282</view>
+    </view>
+    <view style='clear:both;'></view>
+    <view class='driver_tab_marks'>
+      <view>介绍：<text>从2014年开始进入出租车行业，历经4年的风雨，驾驶经验丰富，全天往返庄浪=高铁站，包拼车、随时联系！</text></view>
+    </view>
+  </view>
+</view>

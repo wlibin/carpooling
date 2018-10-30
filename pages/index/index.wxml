@@ -1,0 +1,132 @@
+<!--首页-->
+<view class='index_content'>
+  <view class='broadcast'>
+    <swiper indicator-dots="true" autoplay="{{autoplay}}" interval='{{interval}}' indicator-active-color="#FFF" circular="true">
+      <block wx:for="{{imgUrls}}" wx:key="">
+        <navigator url="{{item.url}}" open-type="navigate">
+          <swiper-item>
+            <image class='top-img' src='{{item.src}}'></image>
+          </swiper-item>
+        </navigator>
+      </block>
+    </swiper>
+  </view>
+  <view class='notice'>
+    <view class='notice_img'>
+      <image src="../resource/images/notice.png"></image>
+    </view>
+    <view class='notice_cont' hover-class="ui-share-hover">
+      <swiper class="swiper_container" vertical="true" autoplay="{{autoplay}}" circular="true" interval="{{interval}}">
+        <block wx:for="{{inforList}}" wx:key="">
+          <navigator url="{{item.noticeUrl}}" open-type="navigate">
+              <swiper-item>
+                <view class="swiper_item">{{item.noticeTitle}}</view>
+              </swiper-item>
+            </navigator>
+        </block>
+      </swiper>
+    </view>
+  </view>
+  <view class='tab'>
+    <view class='tab_nav'>
+      <view class="tab_nav_1 {{currentTab==0?'tab_active':''}}" data-current="0" bindtap="clickTab">全部</view>
+      <view class="tab_nav_2 {{currentTab==1?'tab_active':''}}" data-current="1" bindtap="clickTab">人找车</view>
+      <view class="tab_nav_3 {{currentTab==2?'tab_active':''}}" data-current="2" bindtap="clickTab">车找人</view>
+      <view class="tab_nav_4" bindtap="showModal">
+        <image src='../resource/images/screen.png' style="width:18px;height:18px;position: relative;top:4px;"/>筛选</view>
+    </view>
+    <view wx:if="{{spell != ''}}">
+      <view class='tab_cont' wx:for="{{spell}}" bindtap='detailClick' data-sid="{{item.sId}}" wx:key="">
+        <view></view>
+        <view class='tab_cont_qi'>
+          <text class='tab_cont_qi_title'>起 :</text><text>{{item.startAddress}}</text>
+          <text wx:if="{{item.type==1}}" class='tab_cont_rzc'>人找车</text><text wx:if="{{item.type==2}}" class='tab_cont_czr'>车找人</text>
+        </view>
+        <view class='tab_cont_zhong'>
+          <text class='tab_cont_zhong_title'>终 :</text><text>{{item.endAddress}}</text>
+        </view>
+        <view class='tab_cont_time'>
+          <text class='fa fa-history' style='margin:0 3px 0 5px;color:#888;'></text> :
+          <text style="padding-left:3px;">{{item.startDate}} {{item.startTime}} 出发<text wx:if="{{item.type==1}}">（<text class='tab_cont_pople_2'>{{item.indexNumber}}</text>人）</text>
+          <text wx:if="{{item.type==2}}">（<text class='tab_cont_pople_1'>{{item.indexNumber}}</text>空位）</text>
+          </text>
+        </view>
+        <view class='tab_cont_user'>
+          <text class='fa fa-user' style='margin:0 3px 0 7px;color:#888;'></text> :
+          <text style="padding-left:3px;" class='tab_cont_user_name'>{{item.contactName}}<text wx:if="{{item.contactGender==1}}" class='tab_cont_user_call'><text class='fa fa-mars' style="color:#1E90FF;font-weight:700;"></text></text>
+          <text wx:elif="{{item.contactGender==2}}" class='tab_cont_user_call'><text class='fa fa-venus' style="color:#FF83FA;"></text></text>
+          <text wx:if="{{item.isTaxi==1}}" class="tab_cont_user_info">实名认证</text>
+          <text wx:if="{{item.isTaxi==1}}" class="tab_cont_user_info">出租车</text>
+          </text>
+          <button catchtap="phoneCalling" hover-class="ui-share-hover" class='tab_cont_btn' data-tel="{{item.contactTel}}">电话咨询</button>
+        </view>
+        <view class='tab_cont_marks' wx:if="{{item.marks != null && item.marks != ''}}">备注：{{item.marks}}</view>
+      </view>
+    </view>
+    <view wx:else style='width:100%;height:100%;display: flex;justify-content: center;'>
+      <image src='../resource/images/no_data_index.png' style='width:140px;height:140px;margin-top:60px;'></image>
+    </view>
+  </view>
+  <view class='index_footer' wx:if="{{isfooter}}">
+    <view>——    以上是全部最新拼车信息     ——</view>
+  </view>
+</view>
+<!-- 没有获取授权弹出弹窗 -->
+<view class="userinfo" wx:if="{{!authorize}}">
+  <view class='dialog-mask'></view>
+  <view class="socket">
+    <view class='title' >微信授权</view>
+    <view class='content' >庄浪拼车出行申请获得以下权限：</view>
+    <view class='contents' ><text style='color:#999;font-size:10px;'> ●</text> 获得你的公开信息（昵称、头像等）</view>
+    <view class='footer'>
+      <button class='authorize' open-type="getUserInfo" bindgetuserinfo="getUserInfo">允许</button>
+    </view>     
+  </view>
+</view>
+<!--屏幕背景变暗的背景  -->
+<view class="commodity_screen" bindtap="hideModal" wx:if="{{showModalStatus}}"></view>
+<!--弹出框  -->
+<view animation="{{animationData}}" class="commodity_attr_box" wx:if="{{showModalStatus}}">
+  <form bindsubmit="formSubmit" bindreset="formReset">
+    <view class="commodity_bar">
+      <text class='commodity_no' bindtap="hideModal">取消</text>
+      <text class='commodity_reset' bindtap="formResets">清空筛选</text>
+      <button class='commodity_yes' form-type='submit'>确定</button>
+    </view>
+    <view class='commodity_vp'>
+      <text bindtap="comCurrentTab" data-value="0" class="commodity_vp_1 commodity_vp_ts {{comCurrentTab==0?'commodity_vp_active':''}}">全部</text>
+      <text bindtap="comCurrentTab" data-value="1" class="commodity_vp_2 commodity_vp_ts {{comCurrentTab==1?'commodity_vp_active':''}}">人找车</text>
+      <text bindtap="comCurrentTab" data-value="2" class="commodity_vp_3 commodity_vp_ts {{comCurrentTab==2?'commodity_vp_active':''}}">车找人</text>
+      <input hidden='true' name="comType" value="{{comType}}"/>
+    </view>
+    <view class='commodity_adr'>
+      <view class='commodity_adr_start commodity_adr_ts'>
+        <!--<picker bindchange="startAddressTab" mode = "region" value="{{region}}">
+          <input name="comStartAddress" placeholder='从哪儿出发' disabled='true' value='{{comStartAddress[0]}}{{comStartAddress[1]}}{{comStartAddress[2]}}' class='edit_input_adr'/>
+        </picker>-->
+        <input name="comStartAddress" placeholder='从哪儿出发' cursor-spacing='1' value='{{comStartAddress}}' class='edit_input_adr'/>
+      </view>
+      <view bindtap='bindAdrChange' class='commodity_adr_img'><image src='../resource/images/switch.png'/></view>
+      <view class='commodity_adr_end commodity_adr_ts'>
+        <!--<picker bindchange="endAddressTab" mode = "region" value="{{region}}">
+          <input name="comEndAddress" placeholder='到哪儿去' disabled='true' value='{{comEndAddress[0]}}{{comEndAddress[1]}}{{comEndAddress[2]}}' class='edit_input_adr'/>
+        </picker>-->
+        <input name="comEndAddress" placeholder='到哪儿去' cursor-spacing='1' value='{{comEndAddress}}' class='edit_input_adr'/>
+      </view>
+    </view>
+    <view class='commodity_date_number commodity_date_left'>
+      <view class="section">
+        <picker mode="date" value="{{date}}" start="1978-01-01" end="2999-01-01" bindchange="bindDateChange">
+          <input name="comStartDate" value='{{comStartDate}}' placeholder="出发日期" disabled='disabled'/>
+        </picker>
+      </view>
+    </view>
+    <view class='commodity_date_number commodity_number_right'>
+      <view class="section" >  
+        <picker bindchange="bindPickerChange" value="{{objectArray.comIndexNumber}}" range="{{objectArray}}" mode = "selector">  
+            <input name="comIndexNumber" value='{{objectArray[comIndexNumber]}}' placeholder="空位/人数" disabled='disabled'/>
+        </picker>
+      </view>
+    </view>
+  </form>
+</view>

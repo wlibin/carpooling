@@ -1,0 +1,27 @@
+.content{
+  font-size: 14px;
+  padding: 0 16px 0 16px;
+  line-height: 28px;
+  margin-top: 10px;
+}
+.content text{
+  margin-left: 2em;
+}
+.cont_title{
+  font-size: 16px;
+  font-weight: 700;
+  margin: 10px 0 10px 0;
+}
+.colorRed{
+  color: #FF0000;
+}
+.colorWeight{
+  font-weight: 700;
+}
+.cont-ut{
+  width: 100%;
+  font-size: 16px;
+  font-weight: 700;
+  text-align: center;
+  line-height: 50px;
+}

@@ -1,0 +1,138 @@
+page{
+  height: 100%;
+  background-color: #efeff4;
+}
+.myself_content{
+  margin-bottom: 20px;
+}
+.ui-share-hover{
+  opacity: 0.6;
+}
+.myself_nav{
+  background-color: #FFF;
+  margin: 10px 10px 0 10px;
+  padding: 15px 15px 5px 15px;
+  font-size: 11px;
+  border-radius: 4px;
+  border-bottom: 1px solid #f3f3f3;
+  line-height: 26px;
+}
+.myself_qi{
+  margin: 5px 0 5px 0;
+  font-size: 16px;
+}
+.myself_zhong{
+  margin: 5px 0 5px 0;
+  font-size: 16px;
+}
+.myself_qi_title{
+  font-size: 16px;
+  margin-right: 5px;
+  padding: 0 3px 0 3px;
+  text-align: center;
+  color: #00bfaf;
+}
+.myself_zhong_title{
+  font-size: 16px;
+  margin-right: 5px;
+  padding: 0 3px 0 3px;
+  text-align: center;
+  color: #FF0000;
+}
+.myself_time{
+  color: #555;
+  font-size: 14px;
+}
+.myself_pople_1{
+  color: #FF0000;
+  font-weight: 700;
+  padding: 0 3px 0 3px;
+}
+.myself_pople_2{
+  color: #00bfaf;
+  font-weight: 700;
+  padding: 0 3px 0 3px;
+}
+.myself_user{
+  color: #555;
+  font-size: 14px;
+}
+.tab_cont_rzc{
+  padding: 1px 4px 1px 4px;
+  margin-left: 5px;
+  border-radius: 2px;
+  color: #FFF;
+  font-size: 12px;
+  font-weight: 700;
+  background-color: #00bfaf;
+  opacity: 0.7;
+  position: relative;
+  top: -1px;
+}
+.tab_cont_czr{
+  padding: 1px 4px 1px 4px;
+  margin-left: 5px;
+  border-radius: 2px;
+  color: #FFF;
+  font-size: 12px;
+  font-weight: 700;
+  background-color: #FF0000;
+  opacity: 0.4;
+  position: relative;
+  top: -1px;
+}
+.myself_user image{
+  width: 16px;
+  height: 16px;
+  border-radius: 10px;
+  position: relative;
+  top: 3px;
+  margin-right: 3px;
+}
+.myself_user_call{
+  font-size: 10px;
+  padding: 0 5px 0 5px;
+  color: #999;
+}
+.myself_user_info{
+  border: 1px solid #00bfaf;
+  color: #00bfaf;
+  font-size: 10px;
+  border-radius: 4px;
+  padding: 0 3px 0 3px;
+  margin: 0 2px 0 2px;
+}
+.myself_user_info_no{
+  display: none;
+}
+.myself_btn{
+  width: 80px;
+  font-size: 12px;
+  background-color: #00bfaf;
+  color: #FFF;
+  float: right;
+  position: relative;
+  top: -5px;
+}
+.myself_operation{
+  height: 30px;
+  border-top: 1px solid #e1e1e1;
+  margin-top: 5px;
+  padding-top: 10px;
+  font-size: 14px;
+  text-align: right;
+}
+.myself_edit{
+  color: #00bfaf;
+  border: 1px solid #00bfaf;
+  padding: 2px 10px 2px 10px;
+  margin-left: 10px;
+  border-radius: 4px;
+}
+.myself_delete{
+  color: #FF0000;
+  border: 1px solid #FF0000;
+  padding: 2px 10px 2px 10px;
+  margin-left: 10px;
+  border-radius: 4px;
+}
